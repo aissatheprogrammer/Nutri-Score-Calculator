@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr" style="overflow-y: hidden; " >
+<head>
+  <meta charset="utf-8">
+  <title>Info Page</title>
+
+  <style>
+    @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+    .registration {
+        position: relative;
+        border-radius: 65px;
+        padding: 0px 98px;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.514), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        background-color: rgba(255, 255, 255, 0.877);
+        
+
+      }
+
+    .registration > label {
+        display: block;
+        margin: 24px 0;
+        width: 326px;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+
+    }
+
+    .background-img{
+        background-repeat: no-repeat;
+        background-size:cover
+      }
+
+    #copyright {
+        position: absolute;
+        bottom: 0;  
+        left: 0;
+        background-color: rgb(100,211,179);
+        border-radius: 6px;
+
+    }
+
+    </style>
+  <body background="{{ url_for('static', filename='fruitts.jpg') }}" class="background-img">
+</head>
+    <body>
+        <label class="registration"> 
+            <h2 style="text-align: center;">Ce site</h2> 
+            <h3>Pour la prevision faite par ce site on fait appelle à un algorithm Random Forest
+                <h3 style="text-align: center; " >ce dit, la prevision sera bonne au ~95% des cas mais pas parfaite. 
+                    <h3>Ce site à etait fait à l'aide de la librerie flask de Python et de beaucoup de cafè
+                        <h3>Et pour l'instant tout les form pas rempli sont remplacè par zero
+
+            </h3> 
+            <div style="text-align: center;">
+            <a>Pour plus d'info -->  </a> 
+            <a href="https://gitlab.com/simplon-dev-ia/grenoble-2021-2022/projets/projet-1/projet-1-groupe-1">Git Lab </a> 
+            </div>
+        </label>
+    </body>
+    <div class="hero-foot" id="copyright">
+        <nav class="tabs is-boxed is-fullwidth">
+      <div class="container" >
+        <ul>
+          <li>
+            <a href="{{ url_for('index') }}" method="post" class="has-text-white">Home</a>
+          </li>
+          <li>
+            <a  href="{{ url_for('info') }}" method="post" class="has-text-white">Info</a>
+          </li>
+        </ul>
+    </div>
+</html>
